@@ -1,0 +1,275 @@
+:root {
+--primary-color: #2ecc71;
+    --secondary-color: #2771ae;
+    --accent-color: #f39c12;
+    --text-color: #ffffff;
+    --background-color:#34495e;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    background-color: #365b6d;
+    height: 100vh;
+    position: relative;
+}
+
+.opening {
+    position: relative;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    font-size: 20px;
+    padding-block: 20px;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.419);
+    z-index: 9999;
+    font-weight: bold;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.4s, transform 0.3s;
+}
+.navbar a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+    color: var(--accent-color);
+}
+
+.up {
+    position: sticky;
+    top: 650px;
+    padding-inline: 20px;
+    z-index: 9999;
+    font-size: 2rem;
+    background-color: #ffffff18;
+    border-radius: 40%;
+    display: inline-block;
+    left: 20px;
+}
+.up a {
+    color: white;
+}
+.up a:hover {
+    color: black;
+}
+.profile {
+    display: grid;
+    grid-template-rows: repeat(8, 130px);
+    grid-template-columns: repeat(5, 20%);
+    margin-bottom: 100px;
+}
+
+.pfp {
+    height: 200px;
+    width: 200px;
+    border-radius: 80%;
+    transition: transform 0.3s ease;
+    box-shadow: 5px 10px 7px rgba(0, 0, 0, 0.419);
+}
+
+.pfp:hover {
+    transform: scale(2.05);
+}
+
+.in-profile {
+    text-align: center;
+    grid-area: 2/2/4/5;
+}
+
+.in-profile p {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.in-profile h3 {
+    grid-area: 4/3/4/4;
+    margin-top: 40px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+span {
+    font-size: 5rem;
+}
+
+.container {
+    margin-top: 400px;
+    display: grid;
+    grid-template-rows: repeat(4, 600px);
+    grid-template-columns: repeat(2, 50%);
+    gap: 0px;
+    background-color: var(--secondary-color);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.container>div>p {
+    padding: 50px;
+    text-align: justify;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h3 {
+    font-weight: bold;
+}
+
+.content p {
+    margin-top: 1rem;
+}
+
+.box {
+    display: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+#card {
+    text-align: center;
+    width: 100%;
+}
+
+#card>img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.408);
+    padding: 20px;
+    overflow-y: auto;
+
+}
+
+.view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view img {
+    width: 30%;
+    margin-inline: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.408);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+@media(max-width: 720px) {
+    .in-profile {
+        grid-area: 2/1/2/6;
+    }
+    .up a{
+        font-size: 1rem;
+        position: absolute;
+        background-color: #ffffff18;
+        border-radius: 40%;
+        padding: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr 300px);
+    }
+
+    .container>div {
+        font-size: 1.2rem;
+    }
+
+    .container>div>p {
+        text-align: justify;
+        padding: 10px;
+    }
+
+    #gambar2 {
+        grid-area: 3/1/4/1;
+    }
+
+    #gambar5 {
+        grid-area: 7/1/8/1;
+    }
+
+    #card>img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        padding-inline: 0;
+    }
+
+    .view {
+        display: inline-block;
+    }
+
+    .view img {
+        width: 80%;
+        margin-inline: 20px;
+        padding-inline: none;
+    }
+}

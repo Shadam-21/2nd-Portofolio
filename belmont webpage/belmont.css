@@ -1,0 +1,76 @@
+:root {
+    color-scheme: light dark;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 50px 50px 0 50px;
+    background-color: light-dark (#fff, #444);
+    color: light-dark (#fff, #444);
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+  }
+
+  .logo {
+    height: 150px;
+    width: 150px;
+    margin: 0
+  }
+  .main {
+    flex: 1;
+  }
+  
+  h1 {
+    font-size: 5rem;
+  }
+  
+  footer {
+    text-align: right;
+    color: midnightblue;
+  }
+  
+  .tebel {
+    color:blueviolet
+  }
+  
+  .card {
+    width: 45%;
+  }
+
+  .tile-image {
+    height: 200px;
+    width: 250px;
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .left {
+    float: left;
+  }
+  
+  .right {
+    float: right;
+  }
+  
+  @media (max-width:700px) {
+    .card {
+      width: 100%;
+      text-align: justify;
+      margin-bottom: 30px;
+    }
+    .tile-image {
+      height: 200px;
+      width: 100%;
+      flex: 12;
+      object-fit: cover;
+    }
+  }
+  
+  /* jadi kesimpulannya, gimana biar nyusun bisa sejajar
+      1. bentuk dulu card yang menjadi dasarnya, bikin ukurannya sama pake width.
+      2. buat backgroundnya sama, supaya bisa dilihat sejajar(janlupa diapus pas beres).
+      3. atur ukuran gambarnya, kasih float mau kanan atau kiri, kasi margin-kanan biar tulisannya ga dempet(ke gambar bukan ke tulisan).
+      4. div di sebelah kiri dan kanan, kasih float juga.
+      5. *no.4 (hapus warna background card)
+      
