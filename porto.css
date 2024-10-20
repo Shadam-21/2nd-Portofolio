@@ -221,7 +221,7 @@ img:hover {
 }
 
 
-@media(max-width: 768px) {
+@media(max-width: 800px) {
     .in-profile {
         grid-area: 2/1/2/6;
     }
