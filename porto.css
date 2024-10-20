@@ -72,7 +72,6 @@ h1 {
 .navbar a:hover {
     color: var(--accent-color);
     transform: translateY(-3px);
-    color: var(--accent-color);
 }
 
 .up {
@@ -222,7 +221,7 @@ img:hover {
 }
 
 
-@media(max-width: 720px) {
+@media(max-width: 768px) {
     .in-profile {
         grid-area: 2/1/2/6;
     }
